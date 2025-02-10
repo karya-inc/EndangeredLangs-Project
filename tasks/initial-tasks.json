@@ -1,0 +1,588 @@
+{
+  "name": "[NorthEast] Recipe Collection Task",
+  "spec": {
+    "end": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": null
+      },
+      "ctype": "END"
+    },
+    "start": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "name_prompt"
+      },
+      "ctype": "START"
+    },
+    "name_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "recipe_prompt"
+      },
+      "text": {
+        "key": "recipe_name",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "name_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "name_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Please enter the name of recipe you are sharing"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "recipe_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "open_component"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Please share a step by step process of preparing the recipe"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "open_component": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "ingredients_location_prompt"
+      },
+      "ctype": "USER",
+      "dtype": "OPEN",
+      "output": {
+        "key": "recipe_steps",
+        "type": "ARRAY"
+      }
+    },
+    "ingredients_location_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredients_location_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Where can the ingredients for this dish be found?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ingredients_location_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredients_storage_prompt"
+      },
+      "text": {
+        "key": "ingredients_location",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "ingredients_storage_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredients_storage_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "How should the ingredients for this dish be stored?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ingredients_storage_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "utensils_prompt"
+      },
+      "text": {
+        "key": "ingredients_storage",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "utensils_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "utensils_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there any specific vessels or utensils needed? If traditional vessels are not used, what changes might occur in the prepared dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "utensils_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "storage_duration_prompt"
+      },
+      "text": {
+        "key": "utensils",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "storage_duration_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "storage_duration_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "How long can the prepared food be stored?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "storage_duration_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "traditional_storage_prompt"
+      },
+      "text": {
+        "key": "storage_duration",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "traditional_storage_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "traditional_storage_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Is there a traditional way of storing this dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "traditional_storage_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "region_prompt"
+      },
+      "text": {
+        "key": "traditional_storage",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "region_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "region_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "What region or community is this dish traditionally associated with?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "region_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "stories_prompt"
+      },
+      "text": {
+        "key": "region",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "stories_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "stories_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there any stories, myths, or folklore tied to this dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "stories_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "events_prompt"
+      },
+      "text": {
+        "key": "stories",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "events_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "events_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there any festivals or cultural events where this food plays a central role?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "events_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "etiquette_prompt"
+      },
+      "text": {
+        "key": "events",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "etiquette_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "etiquette_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there any specific etiquettes or rituals associated with eating this dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "etiquette_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "pairing_prompt"
+      },
+      "text": {
+        "key": "etiquette",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "pairing_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "pairing_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there traditional food/drinks that are paired with this dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "pairing_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "availability_prompt"
+      },
+      "text": {
+        "key": "pairing",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "availability_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "availability_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Can one find it in a regular Jharkhand restaurant in Delhi?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "availability_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "nutritional_benefits_prompt"
+      },
+      "text": {
+        "key": "availability",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "nutritional_benefits_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "nutritional_benefits_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Any known nutritional benefits or does it contain any natural remedies for common health issues?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "nutritional_benefits_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "health_conditions_prompt"
+      },
+      "text": {
+        "key": "nutritional_benefits",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "health_conditions_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "health_conditions_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Are there any health conditions where this food is advised to be avoided?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "health_conditions_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "memory_prompt"
+      },
+      "text": {
+        "key": "health_conditions",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "memory_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "memory_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Is there a special memory or occasion tied to this dish in your life?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "memory_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "like_dislike_prompt"
+      },
+      "text": {
+        "key": "memory",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "like_dislike_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "like_dislike_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Do you like or not like this dish? Why?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "like_dislike_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "additional_info_prompt"
+      },
+      "text": {
+        "key": "like_dislike",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "additional_info_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "additional_info_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Anything else you want to tell us about this dish?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "additional_info_input": {
+      "text": {
+        "key": "additional_info",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    }
+  },
+  "tags": [
+    "recipe-data",
+    "open-component",
+    "main",
+    "northeast"
+  ],
+  "files": {},
+  "taskType": "MANUAL",
+  "allowEdit": false,
+  "configSpec": {
+    "end": {
+      "key": "end",
+      "name": "End Component",
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": null
+      },
+      "ctype": "END",
+      "description": "Last Component of the task specification"
+    },
+    "start": {
+      "key": "start",
+      "name": "Start Component",
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "language-prompt"
+      },
+      "ctype": "START",
+      "description": "First Component of the task specification"
+    },
+    "lanuage-input": {
+      "key": "lanuage-input",
+      "name": "lanuage-input",
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "end"
+      },
+      "text": {
+        "key": "langauge",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT",
+      "description": "lanuage-input"
+    },
+    "language-prompt": {
+      "key": "language-prompt",
+      "name": "language-prompt",
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "lanuage-input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "In which language will you be collecting the data?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT",
+      "description": "language-prompt"
+    }
+  },
+  "description": "Recipe Collection Task for NorthEast",
+  "instruction": "Upload step by step process for a recipe you'd like to share with us",
+  "display_name": "[Main] Recipe Collection Task",
+  "allowSkipping": false,
+  "requireConfig": true,
+  "enableReferral": false,
+  "enableTestTask": false,
+  "surveyAvailable": false,
+  "isValidationTask": false,
+  "reassignRejected": false,
+  "outputDatasetName": "[OUT] [NorthEast] Recipe Collection Task",
+  "tutorialAvailable": false,
+  "customIntroEnabled": false,
+  "requiresValidation": false,
+  "outputGenGranularity": "ASSIGNMENT",
+  "createNewOutputDataset": true,
+  "baseCreditsPerMicrotask": 0,
+  "maxReassignmentsPerUser": 1,
+  "bonusCreditsPerMicrotask": 0,
+  "requireRepeatingMicrotask": false
+}
