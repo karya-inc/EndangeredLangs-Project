@@ -315,6 +315,11 @@
       "dtype": "TEXT"
     },
     "additional_info_input": {
+      "next": {
+        "src":"CONSTANT",
+        "type":"REF",
+        "value":"end"
+      },
       "text": {
         "key": "additional_info",
         "type": "STRING"
