@@ -1,0 +1,507 @@
+{
+  "name": "Recipe Collection Task - Sadri",
+  "spec": {
+    "end": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": null
+      },
+      "ctype": "END"
+    },
+    "start": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "aa_name_prompt"
+      },
+      "ctype": "START"
+    },
+    "tools_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "shelf_life_prompt"
+      },
+      "text": {
+        "key": "tools",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "tools_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "tools_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "इसे बनाने के लिए आप कौन से बर्तन और औजारों का उपयोग करते हैं?\nईके बनाईक ले और कोन सा बासन कर जरूरत पड़े ला?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ab_name_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ac_recipe_prompt"
+      },
+      "text": {
+        "key": "recipe_name",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "stories_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "occasion_prompt"
+      },
+      "text": {
+        "key": "stories",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "aa_name_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ab_name_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "आप कौन सी व्यंजन बना रहे हैं?\nआपन कोन सा पकवान बनात हव?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "occasion_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "eating_method_prompt"
+      },
+      "text": {
+        "key": "occasion",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "stories_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "stories_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या आपके पास इस भोजन के बारे में कोई विशेष कहानी है?\nई पकवान कर बारे में कोनो खास कहनी कहां तोहर जेगे आहे?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "occasion_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "occasion_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "लोग आमतौर पर यह व्यंजन कब बनाते हैं - क्या यह रोजाना या विशेष दिनों के लिए होता है?\nई पकवान के खास कर कब बनेला?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "taught_by_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "stories_prompt"
+      },
+      "text": {
+        "key": "taught_by",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "ac_recipe_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ad_open_component"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "कृपया व्यंजन तैयार करने की प्रक्रिया बताएं\nकिरिपा करके पकवान तईयार करेक कर तरीका बतावां"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "shelf_life_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "taught_by_prompt"
+      },
+      "text": {
+        "key": "shelf_life",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "taught_by_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "taught_by_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "आपको यह व्यंजन बनाना किसने सिखाया?\nई पकवान बनाएक ले रउरे के के सिखा है?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ad_open_component": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "dish_requirements_prompt"
+      },
+      "ctype": "USER",
+      "dtype": "OPEN",
+      "output": {
+        "key": "recipe_steps",
+        "type": "ARRAY"
+      }
+    },
+    "shelf_life_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "shelf_life_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "आप इस भोजन को बनाने के बाद कितने समय तक रख सकते हैं?\nईके बनाइक कर बाद में कितना समय तक रखी ला?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "anything_else_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "end"
+      },
+      "text": {
+        "key": "anything_else",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "children_like_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "anything_else_prompt"
+      },
+      "text": {
+        "key": "children_like",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "eating_method_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "accompaniments_prompt"
+      },
+      "text": {
+        "key": "eating_method",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "accompaniments_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "health_benefits_prompt"
+      },
+      "text": {
+        "key": "accompaniments",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "anything_else_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "anything_else_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या आप मुझे इस व्यंजन के बारे में कुछ और बताना चाहेंगे?\nअच्छा रउरे मन ई पकवान कर बारे में  कुछ और बताईक चाहीला?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "children_like_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "children_like_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या आपके बच्चों को यह खाना पसंद है?\nई पकवान के छउवा मन के पतीयाइन की नहीं?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "eating_method_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "eating_method_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "लोग इस भोजन को कैसे खाते हैं? क्या इसका कोई खास तरीका है?\nई पकवान के सब मन कइसन खाईला? कि इकर खाइक ले कोनो नया तरीका आहे?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "happy_memories_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "children_like_prompt"
+      },
+      "text": {
+        "key": "happy_memories",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "accompaniments_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "accompaniments_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "लोग इसके साथ क्या खाना या पीना पसंद करते हैं?\nइकर साथ में खाएक और पीएक ले पसंद करीला?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "happy_memories_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "happy_memories_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या आपके पास इस व्यंजन के बारे में कोई सुखद यादें हैं?\nई पकवान कर बारे में कोई बढ़िया चीज रउरे मन के याद आहे?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "health_benefits_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "dietary_restrictions_prompt"
+      },
+      "text": {
+        "key": "health_benefits",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "health_benefits_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "health_benefits_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या यह भोजन आपके स्वास्थ्य के लिए अच्छा है? कैसे?\nई पकवान सेहत सेहत करले बढ़िया आहे की नहीं? और अगर बढ़िया आहे तो कैसन आहे?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "dish_requirements_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredient_source_prompt"
+      },
+      "text": {
+        "key": "ingredients",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "ingredient_source_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredient_storage_prompt"
+      },
+      "text": {
+        "key": "ingredient_source",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "dish_requirements_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "dish_requirements_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "मुझे इस व्यंजन के बारे में बताएं - इसे बनाने के लिए हमें क्या चाहिए?\nमौके ई पकवान के बारे में बताऊं कि ई पकवान बनाएक ले और का का सामान लागी?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ingredient_source_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredient_source_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "इसे बनाने के लिए आपको सभी चीजें कहां से मिलती हैं?\nईके बनाइक ले का का सामान कर जरूरत पड़ी?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "ingredient_storage_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "tools_prompt"
+      },
+      "text": {
+        "key": "ingredient_storage",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "ingredient_storage_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ingredient_storage_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "आप इन सामग्रियों को अपने घर में कैसे रखते हैं?\nई सब सामान मन के घर में कैसेन राखी ला रौरेमन?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
+    "dietary_restrictions_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "happy_memories_prompt"
+      },
+      "text": {
+        "key": "dietary_restrictions",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "dietary_restrictions_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "dietary_restrictions_input"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "क्या हर कोई यह भोजन खा सकता है, या कुछ लोगों को इससे बचना चाहिए?\nई पकवान के सब झान खाएन की, या कोई मन नी खाएन?"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    }
+  },
+  "tags": [
+    "recipe-data",
+    "open-component",
+    "Sadri"
+  ],
+  "files": {},
+  "referral": {},
+  "taskType": "MANUAL",
+  "allowEdit": false,
+  "description": "Recipe Collection Task Sadri",
+  "display_name": "Recipe Collection Task - Sadri",
+  "allowSkipping": false,
+  "requireConfig": false,
+  "enableReferral": false,
+  "enableTestTask": false,
+  "surveyAvailable": false,
+  "isValidationTask": false,
+  "outputDatasetName": "[OUT][JH] Recipe Collection Task - Sadri",
+  "tutorialAvailable": false,
+  "customIntroEnabled": false,
+  "requiresValidation": false,
+  "createTaskAssignment": false,
+  "outputGenGranularity": "ASSIGNMENT",
+  "baseCreditsPerMicrotask": 0,
+  "bonusCreditsPerMicrotask": 0,
+  "requireRepeatingMicrotask": false,
+  "subscribeToReferenceDataset": false
+}
