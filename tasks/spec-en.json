@@ -16,7 +16,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "Please enter the name of recipe you are sharing"
+            "value": "What dish are you making?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -43,7 +43,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "Please share a step by step process of preparing the recipe"
+            "value": "Please explain the process of preparing the dish"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -82,7 +82,7 @@
             "value": "ingredient_source_prompt"
         },
         "text": {
-            "key": "dish_ingredients",
+            "key": "ingredients",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -163,7 +163,7 @@
             "value": "shelf_life_prompt"
         },
         "text": {
-            "key": "tools_used",
+            "key": "tools",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -214,7 +214,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "special_stories_prompt"
+            "value": "stories_prompt"
         },
         "text": {
             "key": "taught_by",
@@ -223,11 +223,11 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "special_stories_prompt": {
+    "stories_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "special_stories_input"
+            "value": "stories_input"
         },
         "text": {
             "src": "CONSTANT",
@@ -237,24 +237,24 @@
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "special_stories_input": {
+    "stories_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "when_made_prompt"
+            "value": "occasion_prompt"
         },
         "text": {
-            "key": "special_stories",
+            "key": "stories",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "when_made_prompt": {
+    "occasion_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "when_made_input"
+            "value": "occasion_input"
         },
         "text": {
             "src": "CONSTANT",
@@ -264,24 +264,24 @@
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "when_made_input": {
+    "occasion_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "how_to_eat_prompt"
+            "value": "eating_method_prompt"
         },
         "text": {
-            "key": "when_made",
+            "key": "occasion",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "how_to_eat_prompt": {
+    "eating_method_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "how_to_eat_input"
+            "value": "eating_method_input"
         },
         "text": {
             "src": "CONSTANT",
@@ -291,24 +291,24 @@
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "how_to_eat_input": {
+    "eating_method_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "eat_with_prompt"
+            "value": "accompaniments_prompt"
         },
         "text": {
-            "key": "how_to_eat",
+            "key": "eating_method",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "eat_with_prompt": {
+    "accompaniments_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "eat_with_input"
+            "value": "accompaniments_input"
         },
         "text": {
             "src": "CONSTANT",
@@ -318,14 +318,14 @@
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "eat_with_input": {
+    "accompaniments_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
             "value": "health_benefits_prompt"
         },
         "text": {
-            "key": "eat_with",
+            "key": "accompaniments",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -349,7 +349,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "who_can_eat_prompt"
+            "value": "dietary_restrictions_prompt"
         },
         "text": {
             "key": "health_benefits",
@@ -358,11 +358,11 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "who_can_eat_prompt": {
+    "dietary_restrictions_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "who_can_eat_input"
+            "value": "dietary_restrictions_input"
         },
         "text": {
             "src": "CONSTANT",
@@ -372,14 +372,14 @@
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "who_can_eat_input": {
+    "dietary_restrictions_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
             "value": "happy_memories_prompt"
         },
         "text": {
-            "key": "who_can_eat",
+            "key": "dietary_restrictions",
             "type": "STRING"
         },
         "ctype": "USER",

@@ -16,7 +16,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "Please enter the name of recipe you are sharing"
+            "value": "आप कौन सी व्यंजन बना रहे हैं?\nआपन कोन सा पकवान बनात हव?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -43,7 +43,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "Please share a step by step process of preparing the recipe"
+            "value": "कृपया व्यंजन तैयार करने की प्रक्रिया बताएं\nकिरिपा करके पकवान तईयार करेक कर तरीका बतावां"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -70,7 +70,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "मुझे इस व्यंजन के बारे में बताएं - इसे बनाने के लिए हमें क्या चाहिए? \n मौके ई पकवान के बारे में बताऊं कि ई पकवान बनाएक ले और का का सामान लागी?"
+            "value": "मुझे इस व्यंजन के बारे में बताएं - इसे बनाने के लिए हमें क्या चाहिए?\nमौके ई पकवान के बारे में बताऊं कि ई पकवान बनाएक ले और का का सामान लागी?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -82,7 +82,7 @@
             "value": "ingredient_source_prompt"
         },
         "text": {
-            "key": "dish_ingredients",
+            "key": "ingredients",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -97,7 +97,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "इसे बनाने के लिए आपको सभी चीजें कहां से मिलती हैं? \n ईके बनाइक ले का का सामान कर जरूरत पड़ी?"
+            "value": "इसे बनाने के लिए आपको सभी चीजें कहां से मिलती हैं?\nईके बनाइक ले का का सामान कर जरूरत पड़ी?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -124,7 +124,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आप इन सामग्रियों को अपने घर में कैसे रखते हैं? \n ई सब सामान मन के घर में कैसेन राखी ला रौरेमन?"
+            "value": "आप इन सामग्रियों को अपने घर में कैसे रखते हैं?\nई सब सामान मन के घर में कैसेन राखी ला रौरेमन?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -151,7 +151,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "इसे बनाने के लिए आप कौन से बर्तन और औजारों का उपयोग करते हैं? \n ईके बनाईक ले और कोन सा बासन कर जरूरत पड़े ला?"
+            "value": "इसे बनाने के लिए आप कौन से बर्तन और औजारों का उपयोग करते हैं?\nईके बनाईक ले और कोन सा बासन कर जरूरत पड़े ला?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -163,7 +163,7 @@
             "value": "shelf_life_prompt"
         },
         "text": {
-            "key": "tools_used",
+            "key": "tools",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -178,7 +178,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आप इस भोजन को बनाने के बाद कितने समय तक रख सकते हैं? \n ईके बनाइक कर बाद में कितना समय तक रखी ला?"
+            "value": "आप इस भोजन को बनाने के बाद कितने समय तक रख सकते हैं?\nईके बनाइक कर बाद में कितना समय तक रखी ला?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -205,7 +205,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आपको यह व्यंजन बनाना किसने सिखाया? \n ई पकवान बनाएक ले रउरे के के सिखा है?"
+            "value": "आपको यह व्यंजन बनाना किसने सिखाया?\nई पकवान बनाएक ले रउरे के के सिखा है?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -214,7 +214,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "special_stories_prompt"
+            "value": "stories_prompt"
         },
         "text": {
             "key": "taught_by",
@@ -223,109 +223,109 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "special_stories_prompt": {
+    "stories_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "special_stories_input"
+            "value": "stories_input"
         },
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके पास इस भोजन के बारे में कोई विशेष कहानी है? \n ई पकवान कर बारे में कोनो खास कहनी कहां तोहर जेगे आहे?"
+            "value": "क्या आपके पास इस भोजन के बारे में कोई विशेष कहानी है?\nई पकवान कर बारे में कोनो खास कहनी कहां तोहर जेगे आहे?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "special_stories_input": {
+    "stories_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "when_made_prompt"
+            "value": "occasion_prompt"
         },
         "text": {
-            "key": "special_stories",
+            "key": "stories",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "when_made_prompt": {
+    "occasion_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "when_made_input"
+            "value": "occasion_input"
         },
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग आमतौर पर यह व्यंजन कब बनाते हैं - क्या यह रोजाना या विशेष दिनों के लिए होता है? \n ई पकवान के खास कर कब बनेला? "
+            "value": "लोग आमतौर पर यह व्यंजन कब बनाते हैं - क्या यह रोजाना या विशेष दिनों के लिए होता है?\nई पकवान के खास कर कब बनेला?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "when_made_input": {
+    "occasion_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "how_to_eat_prompt"
+            "value": "eating_method_prompt"
         },
         "text": {
-            "key": "when_made",
+            "key": "occasion",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "how_to_eat_prompt": {
+    "eating_method_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "how_to_eat_input"
+            "value": "eating_method_input"
         },
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग इस भोजन को कैसे खाते हैं? क्या इसका कोई खास तरीका है? \n ई पकवान के सब मन कइसन खाईला? कि इकर खाइक ले कोनो नया तरीका आहे?"
+            "value": "लोग इस भोजन को कैसे खाते हैं? क्या इसका कोई खास तरीका है?\nई पकवान के सब मन कइसन खाईला? कि इकर खाइक ले कोनो नया तरीका आहे?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "how_to_eat_input": {
+    "eating_method_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "eat_with_prompt"
+            "value": "accompaniments_prompt"
         },
         "text": {
-            "key": "how_to_eat",
+            "key": "eating_method",
             "type": "STRING"
         },
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "eat_with_prompt": {
+    "accompaniments_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "eat_with_input"
+            "value": "accompaniments_input"
         },
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग इसके साथ क्या खाना या पीना पसंद करते हैं? \n इकर साथ में खाएक और पीएक ले पसंद करीला?"
+            "value": "लोग इसके साथ क्या खाना या पीना पसंद करते हैं?\nइकर साथ में खाएक और पीएक ले पसंद करीला?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "eat_with_input": {
+    "accompaniments_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
             "value": "health_benefits_prompt"
         },
         "text": {
-            "key": "eat_with",
+            "key": "accompaniments",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -340,7 +340,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या यह भोजन आपके स्वास्थ्य के लिए अच्छा है? कैसे? \n ई पकवान सेहत सेहत करले बढ़िया आहे की नहीं? और अगर बढ़िया आहे तो कैसन आहे?"
+            "value": "क्या यह भोजन आपके स्वास्थ्य के लिए अच्छा है? कैसे?\nई पकवान सेहत सेहत करले बढ़िया आहे की नहीं? और अगर बढ़िया आहे तो कैसन आहे?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -349,7 +349,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "who_can_eat_prompt"
+            "value": "dietary_restrictions_prompt"
         },
         "text": {
             "key": "health_benefits",
@@ -358,28 +358,28 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "who_can_eat_prompt": {
+    "dietary_restrictions_prompt": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "who_can_eat_input"
+            "value": "dietary_restrictions_input"
         },
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या हर कोई यह भोजन खा सकता है, या कुछ लोगों को इससे बचना चाहिए? \n ई पकवान के सब झान खाएन की, या कोई मन नी खाएन?"
+            "value": "क्या हर कोई यह भोजन खा सकता है, या कुछ लोगों को इससे बचना चाहिए?\nई पकवान के सब झान खाएन की, या कोई मन नी खाएन?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
     },
-    "who_can_eat_input": {
+    "dietary_restrictions_input": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
             "value": "happy_memories_prompt"
         },
         "text": {
-            "key": "who_can_eat",
+            "key": "dietary_restrictions",
             "type": "STRING"
         },
         "ctype": "USER",
@@ -394,7 +394,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके पास इस व्यंजन के बारे में कोई सुखद यादें हैं? \n ई पकवान कर बारे में कोई बढ़िया चीज रउरे मन के याद आहे?"
+            "value": "क्या आपके पास इस व्यंजन के बारे में कोई सुखद यादें हैं?\nई पकवान कर बारे में कोई बढ़िया चीज रउरे मन के याद आहे?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -421,7 +421,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके बच्चों को यह खाना पसंद है? \n ई पकवान के छउवा मन के पतीयाइन की नहीं?"
+            "value": "क्या आपके बच्चों को यह खाना पसंद है?\nई पकवान के छउवा मन के पतीयाइन की नहीं?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -448,7 +448,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आप मुझे इस व्यंजन के बारे में कुछ और बताना चाहेंगे? \n अच्छा रउरे मन ई पकवान कर बारे में  कुछ और बताईक चाहीला?"
+            "value": "क्या आप मुझे इस व्यंजन के बारे में कुछ और बताना चाहेंगे?\nअच्छा रउरे मन ई पकवान कर बारे में  कुछ और बताईक चाहीला?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
