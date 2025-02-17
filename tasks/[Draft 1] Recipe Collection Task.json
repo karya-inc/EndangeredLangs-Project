@@ -1,5 +1,5 @@
 {
-  "name": "[Draft 1] Recipe Collection Task",
+  "name": "[Draft 2] Recipe Collection Task",
   "spec": {
     "end": {
       "next": {
@@ -13,36 +13,9 @@
       "next": {
         "src": "CONSTANT",
         "type": "REF",
-        "value": "name_prompt"
+        "value": "aa_name_prompt"
       },
       "ctype": "START"
-    },
-    "name_input": {
-      "next": {
-        "src": "CONSTANT",
-        "type": "REF",
-        "value": "recipe_prompt"
-      },
-      "text": {
-        "key": "recipe_name",
-        "type": "STRING"
-      },
-      "ctype": "USER",
-      "dtype": "TEXT"
-    },
-    "name_prompt": {
-      "next": {
-        "src": "CONSTANT",
-        "type": "REF",
-        "value": "name_input"
-      },
-      "text": {
-        "src": "CONSTANT",
-        "type": "STRING",
-        "value": "Please enter the name of recipe you are sharing"
-      },
-      "ctype": "PLATFORM",
-      "dtype": "TEXT"
     },
     "events_input": {
       "next": {
@@ -78,6 +51,19 @@
       },
       "text": {
         "key": "region",
+        "type": "STRING"
+      },
+      "ctype": "USER",
+      "dtype": "TEXT"
+    },
+    "ab_name_input": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ac_recipe_prompt"
+      },
+      "text": {
+        "key": "recipe_name",
         "type": "STRING"
       },
       "ctype": "USER",
@@ -124,20 +110,6 @@
       "ctype": "USER",
       "dtype": "TEXT"
     },
-    "recipe_prompt": {
-      "next": {
-        "src": "CONSTANT",
-        "type": "REF",
-        "value": "open_component"
-      },
-      "text": {
-        "src": "CONSTANT",
-        "type": "STRING",
-        "value": "Please share a step by step process of preparing the recipe"
-      },
-      "ctype": "PLATFORM",
-      "dtype": "TEXT"
-    },
     "region_prompt": {
       "next": {
         "src": "CONSTANT",
@@ -165,18 +137,19 @@
       "ctype": "USER",
       "dtype": "TEXT"
     },
-    "open_component": {
+    "aa_name_prompt": {
       "next": {
         "src": "CONSTANT",
-        "type": "STRING",
-        "value": "ingredients_location_prompt"
+        "type": "REF",
+        "value": "ab_name_input"
       },
-      "ctype": "USER",
-      "dtype": "OPEN",
-      "output": {
-        "key": "recipe_steps",
-        "type": "ARRAY"
-      }
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Please enter the name of recipe you are sharing"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
     },
     "pairing_prompt": {
       "next": {
@@ -246,6 +219,20 @@
       "ctype": "PLATFORM",
       "dtype": "TEXT"
     },
+    "ac_recipe_prompt": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "ad_open_component"
+      },
+      "text": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "Please share a step by step process of preparing the recipe"
+      },
+      "ctype": "PLATFORM",
+      "dtype": "TEXT"
+    },
     "etiquette_prompt": {
       "next": {
         "src": "CONSTANT",
@@ -259,6 +246,19 @@
       },
       "ctype": "PLATFORM",
       "dtype": "TEXT"
+    },
+    "ad_open_component": {
+      "next": {
+        "src": "CONSTANT",
+        "type": "STRING",
+        "value": "ingredients_location_prompt"
+      },
+      "ctype": "USER",
+      "dtype": "OPEN",
+      "output": {
+        "key": "recipe_steps",
+        "type": "ARRAY"
+      }
     },
     "availability_input": {
       "next": {
@@ -316,9 +316,9 @@
     },
     "additional_info_input": {
       "next": {
-        "src":"CONSTANT",
-        "type":"REF",
-        "value":"end"
+        "src": "CONSTANT",
+        "type": "REF",
+        "value": "end"
       },
       "text": {
         "key": "additional_info",
@@ -508,6 +508,7 @@
     "recipe-data",
     "open-component",
     "draft-1",
+    "__main-task__",
     "__main-task__"
   ],
   "files": {},
