@@ -25,7 +25,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "ac_recipe_prompt"
+            "value": "ab_name_audio"
         },
         "text": {
             "key": "recipe_name",
@@ -33,6 +33,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "ab_name_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ac_recipe_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "ac_recipe_prompt": {
         "next": {
@@ -79,7 +120,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "ingredient_source_prompt"
+            "value": "dish_requirements_audio"
         },
         "text": {
             "key": "ingredients",
@@ -87,6 +128,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "dish_requirements_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "ingredient_source_prompt": {
         "next": {
@@ -133,7 +215,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "tools_prompt"
+            "value": "ingredient_source_audio"
         },
         "text": {
             "key": "ingredient_storage",
@@ -141,6 +223,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "ingredient_source_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "tools_prompt": {
         "next": {
@@ -160,7 +283,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "shelf_life_prompt"
+            "value": "tools_audio"
         },
         "text": {
             "key": "tools",
@@ -168,6 +291,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "tools_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_life_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "shelf_life_prompt": {
         "next": {
@@ -187,7 +351,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "taught_by_prompt"
+            "value": "shelf_audio"
         },
         "text": {
             "key": "shelf_life",
@@ -196,6 +360,48 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
+    "shelf_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+
     "taught_by_prompt": {
         "next": {
             "src": "CONSTANT",
@@ -214,7 +420,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "stories_prompt"
+            "value": "taught_by_input_audio"
         },
         "text": {
             "key": "taught_by",
@@ -222,6 +428,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "taught_by_input_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "stories_prompt": {
         "next": {
@@ -241,7 +488,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "occasion_prompt"
+            "value": "stories_audio"
         },
         "text": {
             "key": "stories",
@@ -249,6 +496,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "stories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "occasion_prompt": {
         "next": {
@@ -268,7 +556,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "eating_method_prompt"
+            "value": "occasion_audio"
         },
         "text": {
             "key": "occasion",
@@ -276,6 +564,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "occasion_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "eating_method_prompt": {
         "next": {
@@ -295,7 +624,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "accompaniments_prompt"
+            "value": "eating_method_audio"
         },
         "text": {
             "key": "eating_method",
@@ -303,6 +632,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "eating_method_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "accompaniments_prompt": {
         "next": {
@@ -322,7 +692,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "health_benefits_prompt"
+            "value": "accompaniments_audio"
         },
         "text": {
             "key": "accompaniments",
@@ -330,6 +700,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "accompaniments_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benefits_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "health_benefits_prompt": {
         "next": {
@@ -349,7 +760,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "dietary_restrictions_prompt"
+            "value": "health_benifits_audio"
         },
         "text": {
             "key": "health_benefits",
@@ -357,6 +768,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "health_benifits_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "dietary_restrictions_prompt": {
         "next": {
@@ -376,7 +828,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "happy_memories_prompt"
+            "value": "dietary_restrictions_audio"
         },
         "text": {
             "key": "dietary_restrictions",
@@ -384,6 +836,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "dietary_restrictions_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "happy_memories_prompt": {
         "next": {
@@ -403,7 +896,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "children_like_prompt"
+            "value": "happy_memories_audio"
         },
         "text": {
             "key": "happy_memories",
@@ -411,6 +904,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "happy_memories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "children_like_prompt": {
         "next": {
@@ -430,7 +964,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "anything_else_prompt"
+            "value": "children_like_audio"
         },
         "text": {
             "key": "children_like",
@@ -438,6 +972,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "children_like_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "anything_else_prompt": {
         "next": {
