@@ -457,7 +457,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "end"
+            "value": "recipe_complete_message"
         },
         "text": {
             "key": "anything_else",
@@ -466,7 +466,21 @@
         "ctype": "USER",
         "dtype": "TEXT"
     },
-    "end": {
+    "recipe_complete_message": {
+  "next": {
+    "src": "CONSTANT",
+    "type": "REF",
+    "value": "aa_name_prompt"
+  },
+  "text": {
+    "src": "CONSTANT",
+    "type": "STRING",
+    "value": "Thanks for telling us about this recipe, let's proceed to the next recipe you're preparing"
+  },
+  "ctype": "PLATFORM",
+  "dtype": "TEXT"
+},
+   "end": {
         "next": {
             "src": "CONSTANT",
             "type": "REF",
