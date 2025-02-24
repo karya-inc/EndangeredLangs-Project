@@ -1091,7 +1091,7 @@
   "text": {
     "src": "CONSTANT",
     "type": "STRING",
-    "value": "Thanks for telling us about this recipe, let's proceed to the next recipe you're preparing"
+    "value": "हमें इस रेसिपी के बारे में बताने के लिए धन्यवाद, आइए आप जो अगली रेसिपी बना रहे हैं उस पर आगे बढ़ें <br> ई खानाकर बताइयेकर तोहरेमन के बहुत बहुत धन्यवाद - चला तो अब दूसरा खाना के और चलियेला  जे खाना तोहे बनाती"
   },
   "ctype": "PLATFORM",
   "dtype": "TEXT",
