@@ -1094,7 +1094,12 @@
     "value": "Thanks for telling us about this recipe, let's proceed to the next recipe you're preparing"
   },
   "ctype": "PLATFORM",
-  "dtype": "TEXT"
+  "dtype": "TEXT",
+  "type": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "MANUAL"
+        }
 },
    "end": {
         "next": {
