@@ -52,11 +52,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_ab_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_ab",
             "type": "FILE"
         },
         "force_replay": {
@@ -147,11 +147,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_dish_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_dish",
             "type": "FILE"
         },
         "force_replay": {
@@ -215,11 +215,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_ingredient_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_ingredient",
             "type": "FILE"
         },
         "force_replay": {
@@ -283,11 +283,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_ingredient_source_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_ingredient_source",
             "type": "FILE"
         },
         "force_replay": {
@@ -351,11 +351,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_tools_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_tools",
             "type": "FILE"
         },
         "force_replay": {
@@ -419,11 +419,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_shelf_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_shelf",
             "type": "FILE"
         },
         "force_replay": {
@@ -488,11 +488,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_taught_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_taught",
             "type": "FILE"
         },
         "force_replay": {
@@ -556,11 +556,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_stories_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_stories",
             "type": "FILE"
         },
         "force_replay": {
@@ -624,11 +624,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_occasion_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_occasion",
             "type": "FILE"
         },
         "force_replay": {
@@ -692,11 +692,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_eating_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_eating",
             "type": "FILE"
         },
         "force_replay": {
@@ -760,11 +760,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_accompaniments_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_accompaniments",
             "type": "FILE"
         },
         "force_replay": {
@@ -828,11 +828,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_health_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_health",
             "type": "FILE"
         },
         "force_replay": {
@@ -896,11 +896,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_dietary_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_dietary",
             "type": "FILE"
         },
         "force_replay": {
@@ -964,11 +964,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_happy_memories_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_happy_memories",
             "type": "FILE"
         },
         "force_replay": {
@@ -1032,11 +1032,11 @@
             }
         },
         "duration": {
-            "key": "user_recording_duration",
+            "key": "user_recording_children_duration",
             "type": "INT"
         },
         "recording": {
-            "key": "user_recording",
+            "key": "user_recording_children",
             "type": "FILE"
         },
         "force_replay": {
