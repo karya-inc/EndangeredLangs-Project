@@ -1,0 +1,1111 @@
+{
+    "start": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "aa_name_prompt"
+        },
+        "ctype": "START"
+    },
+    "aa_name_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ab_name_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "What dish are you making?<br>আপুনি কি খাদ্য বনাই আছে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ab_name_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ab_name_audio"
+        },
+        "text": {
+            "key": "recipe_name",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ab_name_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ac_recipe_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ab_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ab",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ac_recipe_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ad_open_component"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Please explain the process of preparing the dish<br>অনুগ্ৰহ কৰি এই খাদ্য বনোৱাৰ পদ্ধতি বৰ্ণনা কৰক।"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ad_open_component": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "OPEN",
+        "output": {
+            "key": "recipe_steps",
+            "type": "ARRAY"
+        }
+    },
+    "dish_requirements_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Tell me about this dish - what do we need to make it?<br>এই খাদ্যটোৰ বিষয়ে মোক কোৱা - এইটো বনাবলৈ কেনেকুৱা সামগ্ৰী লাগে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "dish_requirements_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_audio"
+        },
+        "text": {
+            "key": "ingredients",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "dish_requirements_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_dish_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_dish",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ingredient_source_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Where do you get everything you need for making it?<br>এইটো বনাবলৈ প্ৰয়োজনীয় সকলো সামগ্ৰী ক’ত পোৱা যায়?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ingredient_source_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_audio"
+        },
+        "text": {
+            "key": "ingredient_source",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ingredient_storage_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ingredient_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ingredient",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ingredient_storage_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "How do you keep these ingredients in your home?<br>এই সামগ্ৰীবোৰ আপোনাৰ ঘৰতে কেনেদৰে ৰাখে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ingredient_storage_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_audio"
+        },
+        "text": {
+            "key": "ingredient_storage",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ingredient_source_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ingredient_source_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ingredient_source",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "tools_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Which pots and tools do you use to make it?<br>এই খাদ্য বনাবলৈ কোনবোৰ উপকৰণ ব্যৱহাৰ কৰে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "tools_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_audio"
+        },
+        "text": {
+            "key": "tools",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "tools_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_life_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_tools_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_tools",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "shelf_life_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_life_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "How long can you keep this food after making it?<br>এই খাদ্য বনাই থৈ কিমান দিনমান ৰাখিব পাৰি?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "shelf_life_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_audio"
+        },
+        "text": {
+            "key": "shelf_life",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "shelf_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_shelf_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_shelf",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "taught_by_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Who taught you to make this dish?<br>আপোনাক এই খাদ্য বনাবলৈ কোনে শিকাইছিল?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "taught_by_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_input_audio"
+        },
+        "text": {
+            "key": "taught_by",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "taught_by_input_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_taught_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_taught",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "stories_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Do you have any special stories about this food?<br>এই খাদ্যৰ সৈতে বিশেষ কিবা কাহিনী আছে নেকি?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "stories_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_audio"
+        },
+        "text": {
+            "key": "stories",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "stories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_stories_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_stories",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "occasion_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "When do people usually make this dish - is it for everyday or special days?<br>মানুহে সাধাৰণতে কেতিয়া এই খাদ্য বনায় - দৈনিক নে বিশেষ দিনত?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "occasion_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_audio"
+        },
+        "text": {
+            "key": "occasion",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "occasion_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_occasion_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_occasion",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "eating_method_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "How do people eat this food? Is there a special way?<br>মানুহে এই খাদ্য কেনেকৈ খায়? বিশেষ কোনো নিয়ম আছে নেকি?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "eating_method_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_audio"
+        },
+        "text": {
+            "key": "eating_method",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "eating_method_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_eating_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_eating",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "accompaniments_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "What do people like to eat or drink with it?<br>এই খাদ্যৰ সৈতে মানুহে কি খায় ভাল পায়?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "accompaniments_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_audio"
+        },
+        "text": {
+            "key": "accompaniments",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "accompaniments_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benefits_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_accompaniments_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_accompaniments",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "health_benefits_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benefits_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Is this food good for your health? How?<br>এই খাদ্য শৰীৰৰ বাবে ভাল নেকি? কেনেকৈ?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "health_benefits_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benifits_audio"
+        },
+        "text": {
+            "key": "health_benefits",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "health_benifits_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_health_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_health",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "dietary_restrictions_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Can everyone eat this food, or should some people avoid it?<br>এই খাদ্য সকলোৰে বাবে উপযোগী নে কিছুমান লোকে এৰাই চলিব লাগে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "dietary_restrictions_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_audio"
+        },
+        "text": {
+            "key": "dietary_restrictions",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "dietary_restrictions_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_dietary_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_dietary",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "happy_memories_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Do you have any happy memories about this dish?<br>এই খাদ্য সৈতে আপোনাৰ সুখকৰ স্মৃতি আছে নেকি?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "happy_memories_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_audio"
+        },
+        "text": {
+            "key": "happy_memories",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "happy_memories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_happy_memories_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_happy_memories",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "children_like_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Do your children like this food?<br>আপোনাৰ শিশুৱে এই খাদ্য ভাল পায় নেকি?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "children_like_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_audio"
+        },
+        "text": {
+            "key": "children_like",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "children_like_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_children_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_children",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "anything_else_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "Is there anything else you'd like to tell me about this dish?<br>এই খাদ্যৰ বিষয়ে আন কিবা ক’ব বিচাৰেনে?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "anything_else_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "recipe_complete_message"
+        },
+        "text": {
+            "key": "anything_else",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "recipe_complete_message": {
+  "next": {
+    "src": "CONSTANT",
+    "type": "REF",
+    "value": "aa_name_prompt"
+  },
+  "text": {
+    "src": "CONSTANT",
+    "type": "STRING",
+    "value": "Thanks for telling us about this recipe, let's proceed to the next recipe you're preparing<br> এই খাদ্যটোৰ বিষয়ে কোৱাৰ বাবে ধন্যবাদ, এতিয়া আপোনাৰ পৰৱৰ্তী খাদ্যৰ ফালে আগবাঢ়োঁ।"
+  },
+  "ctype": "PLATFORM",
+  "dtype": "TEXT",
+  "type": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "MANUAL"
+        }
+},
+   "end": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": null
+        },
+        "ctype": "END"
+    }
+}
