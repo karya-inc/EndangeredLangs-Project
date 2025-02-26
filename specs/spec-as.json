@@ -1072,7 +1072,7 @@
         "next": {
             "src": "CONSTANT",
             "type": "REF",
-            "value": "recipe_complete_message"
+            "value": "anything_else_audio"
         },
         "text": {
             "key": "anything_else",
@@ -1080,6 +1080,47 @@
         },
         "ctype": "USER",
         "dtype": "TEXT"
+    },
+    "anything_else_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "recipe_complete_message"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "anything_else_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_anything_else",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
     },
     "recipe_complete_message": {
   "next": {
