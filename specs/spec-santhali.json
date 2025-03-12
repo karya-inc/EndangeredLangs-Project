@@ -1,0 +1,1172 @@
+{
+    "start": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "aa_name_prompt"
+        },
+        "ctype": "START"
+    },
+    "aa_name_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ab_name_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "आप कौन सी व्यंजन बना रहे हैं? <br> आम ओका लेकान जोञोम एम बेनाव एदा ? "
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ab_name_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ab_name_audio"
+        },
+        "text": {
+            "key": "recipe_name",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ab_name_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ac_recipe_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ab_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ab",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ac_recipe_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ad_open_component"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "कृपया व्यंजन तैयार करने की प्रक्रिया बताएं<br>दाया काते जोञोम बेनाव रेयाक तोहोर लायाञ मे?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ad_open_component": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "OPEN",
+        "output": {
+            "key": "recipe_steps",
+            "type": "ARRAY"
+        }
+    },
+    "dish_requirements_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "मुझे इस व्यंजन के बारे में बताएं - इसे बनाने के लिए हमें क्या चाहिए?<br>नोवा जोञम बाबोत ला़या़´ में,- नोवा बेनाव ला़गीद आबो तेद ला़क्ती आबोना?"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "dish_requirements_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dish_requirements_audio"
+        },
+        "text": {
+            "key": "ingredients",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "dish_requirements_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_dish_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_dish",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ingredient_source_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "इसे बनाने के लिए आपको सभी चीजें कहां से मिलती हैं?<br>नोवा बेनाव ला़गीद आपे सानाम ला़क्तीयान सामान ओकारेम ञमा"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ingredient_source_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_audio"
+        },
+        "text": {
+            "key": "ingredient_source",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ingredient_storage_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ingredient_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ingredient",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "ingredient_storage_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_storage_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "आप इन सामग्रियों को अपने घर में कैसे रखते हैं?<br>आपे नोवा सामान को आमा: ओड़ाक रे ओका लेकाम जोगावा"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "ingredient_storage_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "ingredient_source_audio"
+        },
+        "text": {
+            "key": "ingredient_storage",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "ingredient_source_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_ingredient_source_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_ingredient_source",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "tools_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "इसे बनाने के लिए आप कौन से बर्तन और औजारों का उपयोग करते हैं?<br>दोवा बेनाव ला़गीद आपे ओका लेकान सामान आर सापाब कोम बेभारा"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "tools_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "tools_audio"
+        },
+        "text": {
+            "key": "tools",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "tools_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_life_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_tools_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_tools",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "shelf_life_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_life_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "आप इस भोजन को बनाने के बाद कितने समय तक रख सकते हैं?<br>नोवा जोञम बेनाव काते आपे तिना: ओक्तो धा़बीज एम दोहो दाड़ेया:-आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "shelf_life_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "shelf_audio"
+        },
+        "text": {
+            "key": "shelf_life",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "shelf_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_shelf_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_shelf",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+
+    "taught_by_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "आपको यह व्यंजन बनाना किसने सिखाया?<br>नोवा जोमा: बेनाव आपे ओकोय ए चेद आकाद मेया"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "taught_by_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "taught_by_input_audio"
+        },
+        "text": {
+            "key": "taught_by",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "taught_by_input_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_taught_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_taught",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "stories_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या आपके पास इस भोजन के बारे में कोई विशेष कहानी है?<br>चेत आपे ठेन नोवा जोमा: बाबेत जाहान खास का़हनी मेना:-आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "stories_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "stories_audio"
+        },
+        "text": {
+            "key": "stories",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "stories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_stories_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_stories",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "occasion_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "लोग आमतौर पर यह व्यंजन कब बनाते हैं - क्या यह रोजाना या विशेष दिनों के लिए होता है?<br>होड़ को आसोकायते नोवा जोञम तिस को बेनावा - चेद नोवा दिना़म रेना: जाहान खास दिन को बेनावा"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "occasion_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "occasion_audio"
+        },
+        "text": {
+            "key": "occasion",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "occasion_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_occasion_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_occasion",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "eating_method_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "लोग इस भोजन को कैसे खाते हैं? क्या इसका कोई खास तरीका है?<br>होड़ नोवा जोञम चेद लेका को जोमा, चेद नोवा रेया: जाहान खास तातिका मेना:-आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "eating_method_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "eating_method_audio"
+        },
+        "text": {
+            "key": "eating_method",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "eating_method_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_eating_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_eating",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "accompaniments_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "लोग इसके साथ क्या खाना या पीना पसंद करते हैं?<br>होड़ नोवा साँव चेद जोम को चे ञु को कुसि:-आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "accompaniments_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "accompaniments_audio"
+        },
+        "text": {
+            "key": "accompaniments",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "accompaniments_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benefits_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_accompaniments_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_accompaniments",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "health_benefits_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benefits_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या यह भोजन आपके स्वास्थ्य के लिए अच्छा है? कैसे?<br>चेद नोवा जोञम आपेया: होड़मो ला़गीद नापाय गेया, चेकाते"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "health_benefits_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "health_benifits_audio"
+        },
+        "text": {
+            "key": "health_benefits",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "health_benifits_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_health_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_health",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "dietary_restrictions_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या हर कोई यह भोजन खा सकता है, या कुछ लोगों को इससे बचना चाहिए?<br>चेद नोवा जोञम सानाम होड़ को जोम दाड़ेया:आ, चे किछुक गान होड़ नोवा खोन बा´चाव रे ताहेन हुयु: ताकोवा"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "dietary_restrictions_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "dietary_restrictions_audio"
+        },
+        "text": {
+            "key": "dietary_restrictions",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "dietary_restrictions_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_dietary_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_dietary",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "happy_memories_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या आपके पास इस व्यंजन के बारे में कोई सुखद यादें हैं?<br>चेद आपे ठेन नोवा जोञम बाबोत जाहान नापाय उयहा़र मेना:-आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "happy_memories_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "happy_memories_audio"
+        },
+        "text": {
+            "key": "happy_memories",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "happy_memories_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_happy_memories_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_happy_memories",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "children_like_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या आपके बच्चों को यह खाना पसंद है?<br>चेद आपे रेन गीदरा़ को नोवा जोञम को कुसिया:आ"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "children_like_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "children_like_audio"
+        },
+        "text": {
+            "key": "children_like",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "children_like_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_prompt"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "user_recording_children_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_children",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "anything_else_prompt": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_input"
+        },
+        "text": {
+            "src": "CONSTANT",
+            "type": "STRING",
+            "value": "क्या आप मुझे इस व्यंजन के बारे में कुछ और बताना चाहेंगे?<br>चेद आपे इ´ नोवा जोञम बाबोत आर जाहाना: ला़य सानायेद पेया"
+        },
+        "ctype": "PLATFORM",
+        "dtype": "TEXT"
+    },
+    "anything_else_input": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "anything_else_audio"
+        },
+        "text": {
+            "key": "anything_else",
+            "type": "STRING"
+        },
+        "ctype": "USER",
+        "dtype": "TEXT"
+    },
+    "anything_else_audio": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": "recipe_complete_message"
+        },
+        "ctype": "USER",
+        "dtype": "AUDIO",
+        "bitwidth": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16",
+            "options": {
+                "8": "8 bits per sample",
+                "16": "16 bits per sample"
+            }
+        },
+        "duration": {
+            "key": "anything_else_duration",
+            "type": "INT"
+        },
+        "recording": {
+            "key": "user_recording_anything_else",
+            "type": "FILE"
+        },
+        "force_replay": {
+            "src": "CONSTANT",
+            "type": "BOOLEAN",
+            "value": true
+        },
+        "sampling_rate": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "16k",
+            "options": {
+                "8k": "8 KHz",
+                "16k": "16 KHz",
+                "44k": "44.1 KHz"
+            }
+        }
+    },
+    "recipe_complete_message": {
+  "next": {
+    "src": "CONSTANT",
+    "type": "REF",
+    "value": "copy_worker_name"
+  },
+  "text": {
+    "src": "CONSTANT",
+    "type": "STRING",
+    "value": "हमें इस रेसिपी के बारे में बताने के लिए धन्यवाद, आइए आप जो अगली रेसिपी बना रहे हैं उस पर आगे बढ़ें <br> नोवा जोञोम बोबोत आलेम लायादले लागीद ते आयमा सरहाव, देला माणड सेदा: जोञोम सेद बोलाहा लेनगे जाहाँ आमेम बेनावेद-आ"
+  },
+  "ctype": "PLATFORM",
+  "dtype": "TEXT",
+  "type": {
+            "src": "CONSTANT",
+            "type": "ENUM",
+            "value": "MANUAL"
+        }
+},
+
+"copy_worker_name": {
+    "next": {
+      "src": "CONSTANT",
+      "type": "REF",
+      "value": "end"
+    },
+    "ctype": "BACKGROUND_LOCAL",
+    "source": {
+      "key": "full_name",
+      "src": "WORKER_PROFILE",
+      "type": "ANY"
+    },
+    "target": {
+      "key": "worker_name",
+      "type": "ANY"
+    },
+    "function_id": "COPY"
+  },
+   "end": {
+        "next": {
+            "src": "CONSTANT",
+            "type": "REF",
+            "value": null
+        },
+        "ctype": "END"
+    }
+}
