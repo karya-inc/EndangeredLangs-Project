@@ -16,7 +16,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आप कौन सी व्यंजन बना रहे हैं? <br> अबिन ओकोन जोम: बिन  बइ तनाय ?  "
+            "value": "What dish are you making?<br>नों मा जाग्रा आदार संगासिनो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -84,7 +84,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "कृपया व्यंजन तैयार करने की प्रक्रिया बताएं<br>अरदास मेना: चि नेया बइ तेयाय सेसा जगारे बिन?"
+            "value": "Please explain the process of preparing the dish<br>बे जाग्रा आदार संनायनि आदबखौ अन्नानै बेखेवनानै खोन्था।"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -111,7 +111,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "मुझे इस व्यंजन के बारे में बताएं - इसे बनाने के लिए हमें क्या चाहिए?<br>नेन जोम: रेया: बारे जगारेबेन- नेया बइ लगिड् चेना: दोरकर को होबाना?"
+            "value": "Tell me about this dish - what do we need to make it?<br>बे जाग्रा आदारनि बागै आंनो खोन्था- बेखौ संनो थाखाय जों मा मा नांगोन?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -179,7 +179,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "इसे बनाने के लिए आपको सभी चीजें कहां से मिलती हैं?<br>नेया बइ लगिड् सोबेन दोरकर सामग्री को ओकोन पायते बेन नमेया ?"
+            "value": "Where do you get everything you need for making it?<br>बेखौ संनो थाखाय नोंथांनो नांगौ जानाय गासैखौबो नों बबेनिफ्राय मोनो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -247,7 +247,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आप इन सामग्रियों को अपने घर में कैसे रखते हैं?<br>नेन सामग्री को ओड़ा: रे चिके बेन जोगव ता: ?"
+            "value": "How do you keep these ingredients in your home?<br>नोंथाङा बेफोर मुवाफोरखौ नोंथांनि न'आव माबोरै दोनो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -315,7 +315,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "इसे बनाने के लिए आप कौन से बर्तन और औजारों का उपयोग करते हैं?<br>नेया बइ लगिड् ओकोन बोरतोन ओण्डो: जिनिष को पाइटि रे बेन अगुया ?"
+            "value": "Which pots and tools do you use to make it?<br>नोंथाङा बेखौ संनो थाखाय बबे थुर्सि लथा आरो आगजुफोरखौ बाहायो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -383,7 +383,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आप इस भोजन को बनाने के बाद कितने समय तक रख सकते हैं?<br>नेया बइ केयते चिमितेंग जोंग नेन जोम: बुगिते बेन रिके दइया?"
+            "value": "How long can you keep this food after making it?<br>बे जाग्रा आदारखौ संखांनायनि उनाव नों बेसे गोबाव लाखिनो हायो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -442,7 +442,6 @@
             }
         }
     },
-
     "taught_by_prompt": {
         "next": {
             "src": "CONSTANT",
@@ -452,7 +451,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "आपको यह व्यंजन बनाना किसने सिखाया?<br>ओकोय नेन जोम: बइ एतोकेड बेना?"
+            "value": "Who taught you to make this dish?<br>नोंखौ बे जामुं संनो सोर फोरोंदों?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -520,7 +519,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके पास इस भोजन के बारे में कोई विशेष कहानी है?<br>नेन जोम: लोअते अबेना: जान मुउड़ कानि तोला कना ?"
+            "value": "Do you have any special stories about this food?<br>नोंथांनाव बे जामुंनि सोमोन्दै माबाफोर जुनिया सल'बाथा दं नामा?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -588,7 +587,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग आमतौर पर यह व्यंजन कब बनाते हैं - क्या यह रोजाना या विशेष दिनों के लिए होता है?<br>ओको सोमय होड़ को नेन जोम: को बइ बाया - नेया जावगे को बइया अर जान मनारङ दिलं रे ?"
+            "value": "When do people usually make this dish - is it for everyday or special days?<br>मानसिफ्रा सरासनस्रायै बे जामुंखौ माब्ला बानायो - बेयो सानफ्रोमबोनि ना जुनिया सानफोरनि थाखाय?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -656,7 +655,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग इस भोजन को कैसे खाते हैं? क्या इसका कोई खास तरीका है?<br>होड़ को नेया चिके को जोमेया ?जान इपन डोंग तेचि?"
+            "value": "How do people eat this food? Is there a special way?<br>मानसिफ्रा बे जामुंखौ माबोरै जायो? माबा मोनसे जुनिया नेमखानथि दं नामा?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -724,7 +723,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "लोग इसके साथ क्या खाना या पीना पसंद करते हैं?<br>नेना लोओ होड़ को चिना: जोम ओण्डो: नु सुकु कोआ ?"
+            "value": "What do people like to eat or drink with it?<br>मानसिफ्रा बेजों लोगोसे मा जानो एबा लोंनो मोजां मोनो?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -792,7 +791,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या यह भोजन आपके स्वास्थ्य के लिए अच्छा है? कैसे?<br>नेन जोम: अबेना: नपाय लेकाते बुगिया चि ? चिलिका?"
+            "value": "Is this food good for your health? How?<br>बे जामुंआ नोंथांनि सावस्रिनि थाखाय मोजां नामा? माबोरै?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -860,7 +859,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या हर कोई यह भोजन खा सकता है, या कुछ लोगों को इससे बचना चाहिए?<br>नेन जोम: सोबे को जोम दइया, चि तारा को का जोमेतेया बुगियोआ ?"
+            "value": "Can everyone eat this food, or should some people avoid it?<br>बयबो बे आदारखौ जानो हागोन नामा, एबा माखासे सुबुंफोरा बेनिफ्राय बारग'नांगोन?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -928,7 +927,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके पास इस व्यंजन के बारे में कोई सुखद यादें हैं?<br>अबेन ता रे ने जोम:लोओ सगइ कन जान रांसा चि सुगड़ उड़ु को मेना:?"
+            "value": "Do you have any happy memories about this dish?<br>नोंहा बे जाग्रा आदारनि सोमोन्दै माबाफोर गोजोनथाव गोसोखांथि दङ नामा?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -996,7 +995,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आपके बच्चों को यह खाना पसंद है?<br>अबेना सिटिया होन को नेया जोम: को रांसा तेया चि?"
+            "value": "Do your children like this food?<br>नोंथांनि गथ'फोरा बे आदारखौ मोजां मोनो नामा?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -1064,7 +1063,7 @@
         "text": {
             "src": "CONSTANT",
             "type": "STRING",
-            "value": "क्या आप मुझे इस व्यंजन के बारे में कुछ और बताना चाहेंगे?<br>नेन जोम: बारे अबेन ओण्डो: जान कजि अलिञ केबेन काजि रांसाव तना चि ?"
+            "value": "Is there anything else you'd like to tell me about this dish?<br>बे जाग्रा आदारनि सोमोन्दै नोंथाङा आंनो खोन्थानो लुबैनाय माबाफोर दं नामा?"
         },
         "ctype": "PLATFORM",
         "dtype": "TEXT"
@@ -1127,12 +1126,12 @@
   "next": {
     "src": "CONSTANT",
     "type": "REF",
-    "value": "copy_worker_name"
+    "value": "end"
   },
   "text": {
     "src": "CONSTANT",
     "type": "STRING",
-    "value": "हमें इस रेसिपी के बारे में बताने के लिए धन्यवाद, आइए आप जो अगली रेसिपी बना रहे हैं उस पर आगे बढ़ें <br> नेन जोम: बरे अलिञ बिन जगारड् लिञ लगिड् बितिएम गे,दोला अयर जोम: पा बु सेसेना,ओकोना अबिन बिन  बइ तना"
+    "value": "Thanks for telling us about this recipe, let's proceed to the next recipe you're preparing"
   },
   "ctype": "PLATFORM",
   "dtype": "TEXT",
@@ -1142,45 +1141,6 @@
             "value": "MANUAL"
         }
 },
-
-"copy_worker_name": {
-    "next": {
-      "src": "CONSTANT",
-      "type": "REF",
-      "value": "copy_worker_phone_number"
-    },
-    "ctype": "BACKGROUND_LOCAL",
-    "source": {
-      "key": "full_name",
-      "src": "WORKER_PROFILE",
-      "type": "ANY"
-    },
-    "target": {
-      "key": "worker_name",
-      "type": "ANY"
-    },
-    "function_id": "COPY"
-  },
-  
-  "copy_worker_phone_number": {
-    "next": {
-      "src": "CONSTANT",
-      "type": "REF",
-      "value": "end"
-    },
-    "ctype": "BACKGROUND_LOCAL",
-    "source": {
-      "key": "phone_number",
-      "src": "WORKER_PROFILE",
-      "type": "ANY"
-    },
-    "target": {
-      "key": "worker_name",
-      "type": "ANY"
-    },
-    "function_id": "COPY"
-  },
-
    "end": {
         "next": {
             "src": "CONSTANT",
